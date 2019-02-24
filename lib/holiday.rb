@@ -75,8 +75,7 @@ def all_supplies_in_holidays(holiday_hash)
       x
     end
     }
-        binding.pry
-    puts a.concat(b)
+    puts a.concat(b.join(", "))
     }
   }
 end
