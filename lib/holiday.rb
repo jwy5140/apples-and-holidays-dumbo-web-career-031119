@@ -91,7 +91,7 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each {|x, y|
     y.collect{|x,y|
       if y.include?("BBQ")
-        x
+        "#{x}"
       end
     }
   }
