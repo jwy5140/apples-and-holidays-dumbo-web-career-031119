@@ -68,7 +68,7 @@ def all_supplies_in_holidays(holiday_hash)
     if !x.is_a? (String)
       x = x.to_s
       if (x.include?("_"))
-        a = ((x.split("_")).each {|x| x.capitalize!}).join(" ")
+        a = "  #{((x.split("_")).each {|x| x.capitalize!}).join(" ")}: "
       else
         a = "  #{x.capitalize!}: "
       end
