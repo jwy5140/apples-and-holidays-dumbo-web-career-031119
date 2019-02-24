@@ -64,13 +64,13 @@ def all_supplies_in_holidays(holiday_hash)
   if !x.is_a? (String)
     puts "#{(x.to_s).capitalize!}:"
   end
-  a = y.collect {|x,y|
+  y.each {|x,y|
     if !x.is_a? (String)
       x = x.to_s
       if (x.include?("_"))
-        "  #{((x.split("_")).each {|x| x.capitalize!}).join(" ")}: "
+        a = "  #{((x.split("_")).each {|x| x.capitalize!}).join(" ")}: "
       else
-        "  #{x.capitalize!}: "
+        a = "  #{x.capitalize!}: "
       end
     end
     b = y.collect {|x|
