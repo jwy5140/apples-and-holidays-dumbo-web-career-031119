@@ -66,7 +66,8 @@ def all_supplies_in_holidays(holiday_hash)
   end
   y.each {|x,y|
     if !x.is_a? (String)
-      a = "  #{((x.to_s).split(/\W/)).each {|x| x.capitalize!}}: "
+      if (x.include?(/\W/))
+        x = x.split(/\W/)
     end
     b = y.collect {|x|
     if (x.include?(" "))
