@@ -69,7 +69,6 @@ def all_supplies_in_holidays(holiday_hash)
       x = x.to_s
       if (x.include?("_"))
         a = ((x.split("_")).each {|x| x.capitalize!}).join(" ")
-        binding.pry
       else
         a = "  #{x.capitalize!}: "
       end
